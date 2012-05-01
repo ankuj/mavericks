@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Rename resource &apos;myp-view/src/main/webapp/html/css/style _table.css&apos; to &apos;style_table.css&apos;" description="Rename resource &apos;style _table.css&apos;" flags="7" id="org.eclipse.ltk.core.refactoring.rename.resource" input="src/main/webapp/html/css/style _table.css" name="style_table.css" stamp="1334169847105" updateReferences="true"/>
+</session>

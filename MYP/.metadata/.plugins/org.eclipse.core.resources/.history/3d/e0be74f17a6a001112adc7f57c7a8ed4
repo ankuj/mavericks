@@ -1,0 +1,26 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<html>
+<head>
+<title>Name Collector</title>
+</head>
+<body>
+<h4>Enter your name </h4>
+
+<s:form>
+	<div id="div1">
+		<s:textfield name="user.description" label="One"/>
+                                <s:submit onclick=" " label="Next"/>
+	</div>
+		
+	<div id="div2">
+		<s:textfield name="user.description" label="Two"/>
+                                <s:submit onclick=" " label="Previous"/>
+	</div>	
+</s:form>
+</body>
+<Script>   
+document.getElementById("div1").style.display="";   
+document.getElementById("div2").style.display="none";   
+</Script> 
+</html>

@@ -1,0 +1,63 @@
+<?xml version="1.0"?>
+<!DOCTYPE hibernate-mapping PUBLIC "-//Hibernate/Hibernate Mapping DTD 3.0//EN"
+"http://hibernate.sourceforge.net/hibernate-mapping-3.0.dtd">
+<!-- Generated Feb 14, 2012 8:07:25 PM by Hibernate Tools 3.3.0.GA -->
+<hibernate-mapping>
+    <class name="com.myp.customer.model.PropertyDetails" table="PROPERTYDETAILS">
+        <id name="pid" type="java.lang.String">
+            <column name="PID" />
+            <generator class="assigned" />
+        </id>
+        <property name="state" type="java.lang.String">
+            <column name="STATE" />
+        </property>
+        <property name="city" type="java.lang.String">
+            <column name="CITY" />
+        </property>
+        <property name="zone" type="java.lang.String">
+            <column name="ZONE" />
+        </property>
+        <property name="locality" type="java.lang.String">
+            <column name="LOCALITY" />
+        </property>
+        <property name="address" type="java.lang.String">
+            <column name="ADDRESS" />
+        </property>
+        <property name="bdroom" type="java.lang.String">
+            <column name="BDROOM" />
+        </property>
+        <property name="btroom" type="java.lang.String">
+            <column name="BTROOM" />
+        </property>
+        <property name="dimension" type="java.lang.String">
+            <column name="DIMENSION" />
+        </property>
+        <property name="garfd" type="java.lang.String">
+            <column name="GARFD" />
+        </property>
+        <property name="garvol" type="java.lang.String">
+            <column name="GARVOL" />
+        </property>
+        <property name="builtfloor" type="java.lang.String">
+            <column name="BUILTFLOOR" />
+        </property>
+        <property name="price" type="java.lang.String">
+            <column name="PRICE" />
+        </property>
+        <property name="constrationYear" type="java.lang.String">
+            <column name="CONSTRATIONYEAR" />
+        </property>
+        <property name="constrationType" type="java.lang.String">
+            <column name="CONSTRATIONTYPE" />
+        </property>
+        <property name="paymentratio" type="java.lang.String">
+            <column name="PAYMENTRATIO" />
+        </property>
+        <property name="sellmode" type="java.lang.String">
+            <column name="SELLMODE" />
+        </property>
+        <property name="comments" type="java.lang.String">
+            <column name="COMMENTS" />
+        </property>
+    </class>
+</hibernate-mapping>

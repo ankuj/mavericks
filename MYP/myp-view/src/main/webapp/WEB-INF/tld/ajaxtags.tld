@@ -1,0 +1,304 @@
+<?xml version="1.0" encoding="ISO-8859-1"?>
+<!DOCTYPE taglib
+  PUBLIC "-//Sun Microsystems, Inc.//DTD JSP Tag Library 1.2//EN"
+  "http://java.sun.com/dtd/web-jsptaglibrary_1_2.dtd">
+
+<taglib xmlns="http://java.sun.com/JSP/TagLibraryDescriptor">
+	<tlib-version>1.1</tlib-version>
+	<jsp-version>1.2</jsp-version>
+	<short-name>Ajax Tag Library</short-name>
+	<uri>http://ajaxtags.org/tags/ajax</uri>
+	<description>Ajax Tag Library</description>
+
+	<tag>
+		<name>autocomplete</name>
+		<tag-class>org.ajaxtags.tags.AjaxAutocompleteTag</tag-class>
+		<description>
+			Builds the JavaScript required to populate an input field as
+			the user types
+		</description>
+
+		<attribute>
+			<name>var</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Name of the JavaScript object created
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>attachTo</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Name of the JavaScript object to which autocompleter
+				will attach. You must define 'var' for this to work.
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>baseUrl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				URL of server-side action or servlet that processes
+				search and returns list of values used in autocomplete
+				dropdown
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>source</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Text field where label of autocomplete selection will be
+				populated; also the field in which the user types out
+				the search string
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>target</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Text field where value of autocomplete selection will be
+				populated; you may set this to the same value as the
+				source field
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>parameters</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				A comma-separated list of parameters to pass to the
+				server-side action or servlet
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>className</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				CSS class name to apply to the popup autocomplete
+				dropdown
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>minimumCharacters</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Minimum number of characters needed before autocomplete
+				is executed
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>indicator</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				ID of indicator region that will show during Ajax
+				request call
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>appendSeparator</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				The separator to use for the target field when values
+				are appended [default=space]. If appendValue is not set
+				or is set to "false", this parameter has no effect.
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>preFunction</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Function to execute before Ajax is begun
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>postFunction</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Function to execute after Ajax is finished, allowing for
+				a chain of additional functions to execute
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>errorFunction</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Function to execute if there is a server exception
+				(non-200 HTTP response)
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>parser</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				The response parser to implement
+				[default=ResponseHtmlParser]
+			</description>
+		</attribute>
+	</tag>
+	<tag>
+		<name>select</name>
+		<tag-class>org.ajaxtags.tags.AjaxSelectTag</tag-class>
+		<description>
+			Builds the JavaScript required to populate a select box
+			based on some event
+		</description>
+
+		<attribute>
+			<name>var</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Name of the JavaScript object created
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>attachTo</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Name of the JavaScript object to which select box will
+				attach. You must define 'var' for this to work.
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>baseUrl</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				URL of server-side action or servlet that processes
+				search and returns list of values used in target select
+				field
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>source</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				The initial select field that will form the basis for
+				the search via AJAX
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>target</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Select field where value of AJAX search will be
+				populated
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>parameters</name>
+			<required>true</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				A comma-separated list of parameters to pass to the
+				server-side action or servlet
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>eventType</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Specifies the event type to attach to the source
+				field(s)
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>executeOnLoad</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Indicates whether the target select/dropdown should be
+				populated when the object is initialized (this is
+				essentially when the form loads) [default=false]
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>defaultOptions</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				A comma-seperated list of values of options to be marked
+				as selected by default if they exist in the new set of
+				options
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>preFunction</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Function to execute before Ajax is begun
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>postFunction</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Function to execute after Ajax is finished, allowing for
+				a chain of additional functions to execute
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>errorFunction</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				Function to execute if there is a server exception
+				(non-200 HTTP response)
+			</description>
+		</attribute>
+
+		<attribute>
+			<name>parser</name>
+			<required>false</required>
+			<rtexprvalue>true</rtexprvalue>
+			<description>
+				The response parser to implement
+				[default=ResponseHtmlParser]
+			</description>
+		</attribute>
+	</tag>
+
+
+</taglib>

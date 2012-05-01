@@ -1,0 +1,32 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "struts-2.0.dtd">
+<struts>
+<constant name="struts.custom.i18n.resources"
+        value="LoginAction-conversion" />
+		<package name="default" namespace="/html" extends="struts-default">
+		<action name="addUserAction" 
+			class="loginAction" method="addUsers" >
+		    <result name="success">/html/homes.jsp</result>
+		</action>
+		<action name="LoginAction" class="loginAction" method="validateuser" >
+		    <result name="success">/html/renting.jsp</result>
+		    <result name="fail">/html/homes.jsp</result>
+		</action>
+	
+		<action name="listCustomerAction"
+			class="customerAction" method="listCustomer" >
+		    <result name="success">pages/customer.jsp</result>
+		</action>
+		
+		<action name="saveSelectAction" class="loginAction" method="saveMethod"  >
+			<result name="success">/html/homes.jsp</result>
+		</action>
+		
+		<action name="registerPropertyAction" class="propertyDetailsAction" method="addPropertyDetails"  >
+			<result name="success">/html/homes.jsp</result>
+		</action>
+	</package>
+</struts>

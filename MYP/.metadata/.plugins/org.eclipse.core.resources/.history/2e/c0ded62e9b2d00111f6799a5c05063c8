@@ -1,0 +1,54 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Strict//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-strict.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en" lang="en">
+<head>
+<title>Home - Home Page | IT - Free Website Template from Templates.com</title>
+<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+<meta name="description" content="Place your description here" />
+<meta name="keywords" content="put, your, keyword, here" />
+<meta name="author" content="Templates.com - website templates provider" />
+<link rel="stylesheet" href="css/style.css" type="text/css" media="screen"/>
+<link href='http://fonts.googleapis.com/css?family=Mrs+Sheppards&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+<script src="js/cufon-yui.js" type="text/javascript"></script>
+<script src="js/cufon-replace.js" type="text/javascript"></script>
+<script src="js/Myriad_Pro_300.font.js" type="text/javascript"></script>
+<!--[if lt IE 7]>
+	<script type="text/javascript" src="js/ie_png.js"></script>
+	<script type="text/javascript">
+		 ie_png.fix('.png, #header .row-2 ul li a, #content, .list li');
+	</script>
+<![endif]-->
+</head>
+       
+<body id="page1">
+
+			<!-- HEADER -->
+			<div id="header">
+				<div class="row-1">
+				<table align="center">
+                <tr>
+				<td>
+				<div class="fleft">
+                <img src="images/logo1.gif" />            
+                </div>
+                </td>
+
+				<td><h1>Aasov</h1>  </td>
+				</tr>
+                </table> 
+                             
+				</div>
+				<div id="wrapper">
+<div id="box">
+<h1>How To Build a Basic CSS Layout</h1>
+</div>
+</div>
+				<s:form action="addCustomerAction" >
+  <s:textfield name="name" label="Name" value="" />
+  <s:textarea name="address" label="Address" value="" cols="50" rows="5" />
+  <s:submit />
+</s:form>
+
+			
+				
+</body>
+</html>

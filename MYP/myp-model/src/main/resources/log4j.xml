@@ -1,0 +1,72 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!DOCTYPE log4j:configuration SYSTEM "log4j.dtd">
+
+<log4j:configuration xmlns:log4j="http://jakarta.apache.org/log4j/">
+
+	<!--<appender name="file"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${catalina.home}/logs/iop.log" />
+		<param name="Append" value="false" />
+		<param name="MaxFileSize" value="5000KB" />
+		<param name="MaxBackupIndex" value="10" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%c] %m%n" />
+		</layout>
+	</appender>
+	
+	<appender name="timer-file"
+		class="org.apache.log4j.RollingFileAppender">
+		<param name="File" value="${catalina.home}/logs/iop-timer.log" />
+		<param name="Append" value="true" />
+		<param name="MaxFileSize" value="5000KB" />
+		<param name="MaxBackupIndex" value="5" />
+		<layout class="org.apache.log4j.PatternLayout">
+			<param name="ConversionPattern" value="%d %-5p [%c] %m%n" />
+		</layout>
+	</appender>
+	
+	--><category name="com.opensymphony.xwork2.interceptor" additivity="false">
+		<level value="INFO" />
+		<appender-ref ref="timer-file" />
+	</category>
+	
+	<category name="org.acegisecurity" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="org.opensymphony.xwork2" additivity="false">
+		<level value="FATAL" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="org.apache.struts2" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="org.apache" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="file" />
+	</category>
+
+	<category name="org.springframework" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="file" />
+	</category>
+	
+	<category name="org.hibernate" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="file" />
+	</category>
+	
+	<category name="com.iop" additivity="false">
+		<level value="ERROR" />
+		<appender-ref ref="file" />
+	</category>
+	
+	<root>
+		<level value="INFO" />
+		<appender-ref ref="file" />
+	</root>
+</log4j:configuration>

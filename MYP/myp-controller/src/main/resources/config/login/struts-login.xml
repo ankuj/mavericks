@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "struts-2.0.dtd">
+<struts>
+<constant name="struts.custom.i18n.resources"
+		value="ApplicationResources" />
+		<constant name="struts.devMode" value="true" />
+		<package name="default" namespace="/html" extends="struts-default">
+		<action name="addUserAction" 
+			class="loginAction" method="addUsers" >
+		    <result name="success">/html/homes.jsp</result>
+		</action>
+		<action name="loginAction" class="loginAction" method="validateuser" >
+		    <result name="success">/html/type.jsp</result>
+		    <result name="fail">/html/homes.jsp</result>
+		</action>
+	
+		
+		
+		<action name="addPropertyAction" class="propertyDetailsAction" method="registerProperty">
+		 <result name="success">/html/homes.jsp</result>
+		 <result name="fail">/html/homes.jsp</result>
+		</action>
+		
+		<action name="saveSelectValidation" class="loginAction" method="saveSelect" >
+		    <result name="success">/html/homes.jsp</result>
+		    <result name="fail">/html/homes.jsp</result>
+		    <result name="input">/html/buying_1.jsp</result>
+		</action>
+		<action name="resultAction" class="loginAction" method="selectType" >
+		    <result name="buyer">/html/buy_dashboard.jsp</result>
+		    <result name="seller">/html/sell_dashboard.jsp</result>
+		    <result name="investor">/html/invest_dashboard.jsp</result>
+		</action>
+		<action name="loadLocations" class="loginAction" method="loadLocations" >
+		    <result name="success">/html/buying_1.jsp</result>
+		    <result name="fail">/html/Aasov.jsp</result>
+		</action>
+		<action name="loadLocations" class="loginAction" method="loadLocations" >
+		    <result name="success">/html/buying_1.jsp</result>
+		    <result name="fail">/html/Aasov.jsp</result>
+		</action>
+		
+		<action name="loadLocations" class="loginAction" >
+		    <result name="success">/html/buying_1.jsp</result>
+		</action>
+		
+		<action name="addProperty" class="loginAction" method="addProperty">
+		    <result name="success">/html/RegisterProperty.jsp</result>
+		</action>
+		
+		<action name="div">
+  		<result>/html/buying_leftpanel.jsp</result>
+  		</action>
+ 		
+ 		<action name="loadSearches" class="loginAction" method="displayProperty">
+		    <result name="success">/html/SearchResult.jsp</result>
+		</action>
+		<action name="showProperty" class="propertyDetailsAction" method="execute">
+		    <result name="success">/html/SearchResult.jsp</result>
+		</action>
+		
+		<action name="interestAction" class="propertyDetailsAction" method="showInterest" >
+		    <result name="success">/html/buying_1.jsp</result>
+		</action>
+	</package>
+</struts>

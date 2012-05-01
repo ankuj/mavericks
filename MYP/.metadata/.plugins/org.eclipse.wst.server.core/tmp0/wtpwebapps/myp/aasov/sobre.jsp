@@ -1,0 +1,1 @@
+<center id="boas-vindas">Home excluded from the decorator. click <a href="index.jsp">here</a>to return</center>

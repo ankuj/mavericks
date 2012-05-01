@@ -1,0 +1,22 @@
+<%@ page contentType="text/html; charset=UTF-8" %>
+<%@ taglib prefix="s" uri="/struts-tags" %>
+<!DOCTYPE html PUBLIC "-//W3C//DTD HTML 4.01 Transitional//EN" "http://www.w3.org/TR/html4/loose.dtd">
+<html>
+<head>
+<meta http-equiv="Content-Type" content="text/html; charset=ISO-8859-1">
+<title>Insert title here</title>
+</head>
+<body>
+<s:bean id="radio" name="com.myp.Users"></s:bean>
+   <s:form action="saveSelect" method="post" namespace="/">
+  <s:textfield name="name" label="Name" value="" size="20" />
+  <s:textarea name="address" label="Address" value="" cols="50" rows="5" />
+   <s:select label="Select Day" list="catagories" theme="simple" />
+   <s:iterator value="catagories">
+            </s:iterator>
+   <!--<s:select label="Select Day" name="usingArrayList" value="%{usingArrayList}" headerKey="1"  headerValue="-- Please Select --"  list="catagories" theme="simple" />-->  
+  <s:submit name="cancel" key="cancel" />
+</s:form>
+ <s:property value="usingArrayList"/>
+</body>
+</html>

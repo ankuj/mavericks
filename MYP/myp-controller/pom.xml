@@ -1,0 +1,140 @@
+<project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+	xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
+	<modelVersion>4.0.0</modelVersion>
+	<groupId>com.myp</groupId>
+	<artifactId>myp-controller</artifactId>
+	<name>myp-controller</name>
+	<version>0.0.1</version>
+	<dependencies>
+		<dependency>
+			<groupId>com.myp</groupId>
+			<artifactId>myp-model</artifactId>
+			<version>0.0.1</version>
+		</dependency>
+
+		<!-- Struts2 Core Library -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-core</artifactId>
+			<version>2.1.8</version>
+		</dependency>
+		<dependency>
+			<groupId>com.opensymphony</groupId>
+			<artifactId>xwork-core</artifactId>
+			<version>2.1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.freemarker</groupId>
+			<artifactId>freemarker</artifactId>
+			<version>2.3.15</version>
+		</dependency>
+		<dependency>
+			<groupId>ognl</groupId>
+			<artifactId>ognl</artifactId>
+			<version>2.7.3</version>
+		</dependency>
+
+		<!-- Struts2 Plug-in Library -->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-dojo-plugin</artifactId>
+			<version>2.1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-spring-plugin</artifactId>
+			<version>2.1.6</version>
+		</dependency>
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-fullhibernatecore-plugin</artifactId>
+			<version>1.4-GA</version>
+		</dependency>
+		<!--
+			<dependency> <groupId>org.apache.struts</groupId>
+			<artifactId>struts2-json-plugin</artifactId>
+			<version>2.1.8.1</version> </dependency>
+		-->
+		<dependency>
+			<groupId>org.apache.struts</groupId>
+			<artifactId>struts2-sitemesh-plugin</artifactId>
+			<version>2.1.6</version>
+		</dependency>
+
+		<!-- Sitemesh Library -->
+		<dependency>
+			<groupId>opensymphony</groupId>
+			<artifactId>sitemesh</artifactId>
+			<version>2.4</version>
+		</dependency>
+
+		<!-- JSON Library -->
+		<dependency>
+			<groupId>json-rpc</groupId>
+			<artifactId>json-rpc</artifactId>
+			<version>1.0</version>
+		</dependency>
+		<dependency>
+			<groupId>com.googlecode</groupId>
+			<artifactId>jsonplugin</artifactId>
+			<version>0.33</version>
+		</dependency>
+		<dependency>
+			<groupId>org.ajaxtags</groupId>
+			<artifactId>ajaxtags</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<!-- Apache POI Library -->
+		<dependency>
+			<groupId>org.apache.poi</groupId>
+			<artifactId>poi-ooxml</artifactId>
+			<version>3.5-beta5</version>
+		</dependency>
+
+		<!-- Display Tag Library -->
+		<dependency>
+			<groupId>org.displaytag</groupId>
+			<artifactId>displaytag</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.displaytag</groupId>
+			<artifactId>displaytag-portlet</artifactId>
+			<version>1.2</version>
+		</dependency>
+		<dependency>
+			<groupId>org.displaytag</groupId>
+			<artifactId>displaytag-export-poi</artifactId>
+			<version>1.2</version>
+		</dependency>
+
+		<!-- Servlet Container Library -->
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>servlet-api</artifactId>
+			<version>2.4</version>
+			<scope>provided</scope>
+		</dependency>
+		<dependency>
+			<groupId>javax.servlet</groupId>
+			<artifactId>jsp-api</artifactId>
+			<version>2.0</version>
+			<scope>provided</scope>
+		</dependency>
+
+	</dependencies>
+	<build>
+		<plugins>
+			<plugin>
+				<groupId>org.apache.maven.plugins</groupId>
+				<artifactId>maven-compiler-plugin</artifactId>
+				<version>2.0</version>
+				<configuration>
+					<source>1.6</source>
+					<target>1.6</target>
+				</configuration>
+			</plugin>
+		</plugins>
+	</build>
+</project>

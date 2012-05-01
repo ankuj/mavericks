@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<!DOCTYPE struts PUBLIC
+    "-//Apache Software Foundation//DTD Struts Configuration 2.0//EN"
+    "struts-2.0.dtd">
+<struts>
+	<package name="login" namespace="/common" extends="iop-default">
+	
+		<global-results>
+			<result name="error">/jsp/profile/errorPage.jsp</result>
+			<result name="session-expire" type="redirectAction">
+				<param name="actionName">userHome.action</param>
+				<param name="namespace">/common</param>
+			</result>
+		</global-results>
+		
+		<!--Action Mapping For Registration-->
+		<action name="register">
+			<result>/jsp/register/register.jsp</result>
+		</action>
+		<action name="registration" method="userRegister" class="userRegistrationAction">
+			<result name="input">/home.jsp</result>
+			
+			<result name="greatRequestSuccess" type="redirectAction">
+			<param name="actionName">greatRequestforward.action</param>
+				<param name="namespace">/common</param>
+			</result>
+			<result name="redirect">/jsp/register/addMemberRedirect.jsp</result>
+			<!--<result name="redirect" type="redirectAction">
+				<param name="actionName">successRedirect.action</param>
+				<param name="namespace">/member</param>
+			</result>
+			--><result name="error" type="redirectAction">
+				<param name="actionName">userHome.action</param>
+				<param name="namespace">/common</param>
+			</result>
+		</action>
+		<action name="registerSuccessPage" class="userRegistrationAction" method="successRedirect">
+			<result name="success">/jsp/register/registerSuccess.jsp</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">userHome.action</param>
+				<param name="namespace">/common</param>
+			</result>
+		</action>
+		
+		
+		<!-- Main Login Action Mapping -->
+		<action name="userLogin" method="userLogin" class="loginAction">
+			<result name="input">/home.jsp</result>
+			<result name="greatRequestFail">/jsp/member/memberCheck.jsp</result>
+			<result name="greatRequestSuccess" type="redirectAction">
+			<param name="actionName">greatRequestforward.action</param>
+				<param name="namespace">/common</param>
+			</result>
+			
+			<result name="AssociateSuccess" type="redirectAction">
+				<param name="actionName">memberHome.action</param>
+				<param name="namespace">/member</param>
+			</result>
+			<result name="error" type="redirectAction">
+				<param name="actionName">userHome.action</param>
+				<param name="namespace">/common</param>
+			</result>
+		</action>
+		
+		<!-- ForgetPassword Action Mapping-->
+		<action name="forgetPassword">
+			<result>/jsp/member/forgetPassword.jsp</result>
+		</action>
+		<action name="forgetPasswordPage" method="forgetPassword" class="loginAction">
+			<result name="success">/jsp/member/forgetPasswordSuccess.jsp</result>
+			<result name="error">/jsp/member/forgetPasswordSuccess.jsp</result>
+		</action>
+		
+		<!-- Main Logout Action Mapping -->
+		<action name="mainLogout" method="userLogout" class="logoutAction">
+			<result name="logout" type="redirectAction">
+				<param name="actionName">userHome.action</param>
+				<param name="namespace">/common</param>
+			</result>
+		</action>
+		
+	</package>
+</struts>

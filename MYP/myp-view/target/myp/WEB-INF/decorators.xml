@@ -1,0 +1,31 @@
+<decorators defaultdir="/WEB-INF/decorators">
+	<excludes>
+		<pattern>*ajax*</pattern>
+	</excludes>
+	<decorator name="memberLayout" page="memberLayout.jsp">
+		<pattern>/member/*.action</pattern>
+		<pattern>/member/*.jsp</pattern>
+	</decorator>
+	<decorator name="defaultLayout" page="defaultLayout.jsp">
+		<pattern>/common/*.action</pattern>
+		<pattern>/common/*.jsp</pattern>
+	</decorator>
+	<decorator name="templateLayout" page="templateLayout.jsp">
+		<pattern>/template/*.action</pattern>
+		<pattern>/template/*.jsp</pattern>
+	</decorator>
+	<decorator name="Admindecorator" page="Admindecorator.jsp">
+		<pattern>/admin/*.action</pattern>
+		<pattern>/admin/*.jsp</pattern>
+	</decorator>
+	<decorator name="ccmemberLayout" page="ccmemberLayout.jsp">
+		<pattern>/customercare/*.action</pattern>
+		<pattern>/customercare/*.jsp</pattern>
+	</decorator>
+	
+		<decorator name="main" page="layout.jsp">
+		<pattern>/*</pattern>
+	</decorator>
+	<decorator name="panel" page="panel.jsp">
+	</decorator>
+</decorators>
