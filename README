@@ -1,1 +1,3 @@
-This is a repository based on our maiden project.
+This is a repository for our maiden project Aasov(dot)com. It is a project which was being built for a 
+real estate startup  in India. The core of the technology being based on Struts2, Spring and Hibernate MVC 
+using Maven as the build tool.The frontend has been developed using Jquery. The site is not live at the moment.
